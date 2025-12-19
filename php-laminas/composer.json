@@ -1,9 +1,14 @@
 {
     "require": {
-        "php": "^7.4",
-        "laminas/laminas-component-installer": "^1.0 || ^2.1",
-        "laminas/laminas-development-mode": "^3.2",
-        "laminas/laminas-mvc": "^3.1.1"
+        "php": "^8.1",
+        "laminas/laminas-component-installer": "^3.0",
+        "laminas/laminas-development-mode": "^3.12",
+        "laminas/laminas-mvc": "^3.7"
+    },
+    "config": {
+        "allow-plugins": {
+            "laminas/laminas-component-installer": true
+        }
     },
     "autoload": {
         "psr-4": {

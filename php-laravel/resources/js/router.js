@@ -1,17 +1,25 @@
 import Vue from 'vue'
-
-// Vue Router
 import VueRouter from 'vue-router'
+
 Vue.use(VueRouter)
 
-// Phase Routes
-import PhaseRoutes from '@phased/phase/routes'
+// Import page components
+import HomePage from './pages/BlogController/HomePage.vue'
+import AboutPage from './pages/BlogController/AboutPage.vue'
+import ContactPage from './pages/BlogController/ContactPage.vue'
+import SingleArticle from './pages/BlogController/SingleArticle.vue'
 
-// Export our configured router
+const routes = [
+    { path: '/', component: HomePage },
+    { path: '/about', component: AboutPage },
+    { path: '/contact', component: ContactPage },
+    { path: '/posts/:article', component: SingleArticle }
+]
+
 export const router = new VueRouter({
     mode: 'history',
-    routes: PhaseRoutes,
+    routes,
     scrollBehavior(to, from, savedPosition) {
         return savedPosition ?? { x: 0, y: 0 }
     }
-});
+})

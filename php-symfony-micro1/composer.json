@@ -1,19 +1,24 @@
 {
   "require": {
-    "php": "^7.1.3",
+    "php": "^8.1",
     "ext-ctype": "*",
     "ext-iconv": "*",
-    "symfony/console": "4.3.*",
-    "symfony/dotenv": "4.3.*",
-    "symfony/flex": "^1.3.1",
-    "symfony/framework-bundle": "4.3.*",
-    "symfony/yaml": "4.3.*"
+    "symfony/console": "^6.4",
+    "symfony/dotenv": "^6.4",
+    "symfony/flex": "^2.4",
+    "symfony/framework-bundle": "^6.4",
+    "symfony/yaml": "^6.4",
+    "symfony/runtime": "^6.4"
   },
   "config": {
     "preferred-install": {
       "*": "dist"
     },
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "symfony/flex": true,
+      "symfony/runtime": true
+    }
   },
   "autoload": {
     "psr-4": {
@@ -26,12 +31,8 @@
     }
   },
   "replace": {
-    "paragonie/random_compat": "2.*",
     "symfony/polyfill-ctype": "*",
-    "symfony/polyfill-iconv": "*",
-    "symfony/polyfill-php71": "*",
-    "symfony/polyfill-php70": "*",
-    "symfony/polyfill-php56": "*"
+    "symfony/polyfill-iconv": "*"
   },
   "scripts": {
     "auto-scripts": {
@@ -51,7 +52,7 @@
   "extra": {
     "symfony": {
       "allow-contrib": false,
-      "require": "4.3.*"
+      "require": "6.4.*"
     }
   }
 }

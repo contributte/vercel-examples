@@ -1,7 +1,6 @@
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
-const Mix = require("laravel-mix/src/Mix");
-require("@phased/phase");
+const path = require("path");
 
 /*
  |--------------------------------------------------------------------------
@@ -15,6 +14,9 @@ require("@phased/phase");
  */
 
 mix
+  .js("resources/js/app.js", "public/js")
+  .vue()
+  .sass("resources/sass/app.scss", "public/css")
   .options({
     processCssUrls: false,
     postCss: [tailwindcss("./tailwind.config.js")],
@@ -23,8 +25,7 @@ mix
     resolve: {
       alias: { "@": path.resolve(__dirname, "resources", "js") },
     },
-  }))
-  .phase();
+  }));
 
 if (!mix.inProduction()) {
   mix.sourceMaps();

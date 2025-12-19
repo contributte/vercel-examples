@@ -4,48 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91e4b731130d55294a40a293af9113c7",
+    "content-hash": "a6dd7e33ffb59128f258b587bc7c9318",
     "packages": [
         {
             "name": "tracy/tracy",
-            "version": "v2.6.3",
+            "version": "v2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "7613eeff265b49a865add75360d1962449e3c12f"
+                "reference": "eec57bcf2ff11d79f519a19da9d7ae1e2c63c42e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/7613eeff265b49a865add75360d1962449e3c12f",
-                "reference": "7613eeff265b49a865add75360d1962449e3c12f",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/eec57bcf2ff11d79f519a19da9d7ae1e2c63c42e",
+                "reference": "eec57bcf2ff11d79f519a19da9d7ae1e2c63c42e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-session": "*",
-                "php": ">=7.1"
+                "php": "8.2 - 8.5"
+            },
+            "conflict": {
+                "nette/di": "<3.0"
             },
             "require-dev": {
-                "nette/di": "^2.4 || ~3.0.0",
+                "latte/latte": "^2.5 || ^3.0",
+                "nette/di": "^3.0",
+                "nette/http": "^3.0",
+                "nette/mail": "^3.0 || ^4.0",
                 "nette/tester": "^2.2",
-                "nette/utils": "^2.4 || ^3.0",
-                "psr/log": "^1.0"
-            },
-            "suggest": {
-                "https://nette.org/donate": "Please support Tracy via a donation"
+                "nette/utils": "^3.0 || ^4.0",
+                "phpstan/phpstan-nette": "^2.0@stable",
+                "psr/log": "^1.0 || ^2.0 || ^3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.11-dev"
                 }
             },
             "autoload": {
+                "files": [
+                    "src/Tracy/functions.php"
+                ],
+                "psr-4": {
+                    "Tracy\\": "src"
+                },
                 "classmap": [
                     "src"
-                ],
-                "files": [
-                    "src/Tracy/shortcuts.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -62,7 +69,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "😎 Tracy: the addictive tool to ease debugging PHP code for cool developers. Friendly design, logging, profiler, advanced features like debugging AJAX calls or CLI support. You will love it.",
+            "description": "😎  Tracy: the addictive tool to ease debugging PHP code for cool developers. Friendly design, logging, profiler, advanced features like debugging AJAX calls or CLI support. You will love it.",
             "homepage": "https://tracy.nette.org",
             "keywords": [
                 "Xdebug",
@@ -71,17 +78,22 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2019-06-18T12:20:11+00:00"
+            "support": {
+                "issues": "https://github.com/nette/tracy/issues",
+                "source": "https://github.com/nette/tracy/tree/v2.11.0"
+            },
+            "time": "2025-10-31T00:12:50+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3"
+        "php": "^8.1"
     },
-    "platform-dev": []
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

@@ -1,7 +1,16 @@
 {
   "require": {
-    "composer/satis": "^1.0"
+    "php": "^8.1",
+    "composer/satis": "dev-main"
   },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "composer/satis": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "scripts": {
     "vercel": "satis build satis.json public -vvv"
   }
