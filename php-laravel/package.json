@@ -17,13 +17,13 @@
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.97.0",
         "sass-loader": "^16.0.6",
-        "vue-loader": "^15.11.1",
+        "vue-loader": "^17.4.2",
         "vue-template-compiler": "^2.7.16"
     },
     "dependencies": {
         "@j0nz/nifty-layouts": "^1.0.0",
         "dayjs": "^1.8.28",
-        "tailwindcss": "^1.4.6",
+        "tailwindcss": "^4.1.18",
         "vue": "^3.5.26",
         "vue-router": "^3.3.4",
         "vuex": "^4.1.0"
