@@ -1,8 +1,0 @@
-{
-  "builds": [
-    { "src": "*.php", "use": "now-php@canary" }
-  ],
-  "routes": [
-    { "src": "/(.*)",  "dest": "/index.php" }
-  ]
-}
