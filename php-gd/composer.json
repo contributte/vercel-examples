@@ -1,0 +1,6 @@
+{
+  "require": {
+    "php": "^8.5",
+    "intervention/image": "^3.0"
+  }
+}

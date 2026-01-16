@@ -1,0 +1,6 @@
+# Vercel
+.vercel
+
+# Composer
+vendor/
+composer.lock

@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.8.0"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ],
+  "build": {
+    "env": {
+      "NOW_PHP_DEBUG": "1"
+    }
+  }
+}
